@@ -1,0 +1,48 @@
+<header>
+  <button
+    (click)="toggleButton()"
+    class="btn"
+    class="nav-toggle"
+    aria-expanded="false"
+  ></button>
+  <nav class="nav">
+    <div class="line">
+      <img class="logo" src="/assets/shared/logo.svg" alt="" />
+    </div>
+    <ul class="nav__list" id="navigation" data-visible="false">
+      <li>
+        <a
+          class="nav__link main-link uppercase"
+          [routerLinkActive]="['active']"
+          routerLink="/"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >home</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav__link main-link uppercase"
+          [routerLinkActive]="['active']"
+          [routerLink]="['/destination']"
+          >destination</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav__link main-link uppercase"
+          [routerLinkActive]="['active']"
+          [routerLink]="['/crew']"
+          >crew</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav__link main-link uppercase"
+          [routerLinkActive]="['active']"
+          [routerLink]="['/technology']"
+          >technology</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

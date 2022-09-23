@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <div class="container">
+    <p class="clr-white uppercase heading-5 dest">meet your crew</p>
+    <div class="grid">
+      <div class="grid__images">
+        <img class="images" [src]="setImage || images[0]" alt="" />
+        <hr />
+      </div>
+      <div class="grid__dots">
+        <ul class="flex flex__row gap-1">
+          <li>
+            <a
+              (click)="change(0)"
+              class="dots"
+              [routerLink]="['commander']"
+              [routerLinkActive]="['dots--active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+            ></a>
+          </li>
+          <li>
+            <a
+              (click)="change(1)"
+              class="dots"
+              [routerLink]="['mission-specialist']"
+              [routerLinkActive]="['dots--active']"
+            ></a>
+          </li>
+          <li>
+            <a
+              (click)="change(2)"
+              class="dots"
+              [routerLink]="['pilot']"
+              [routerLinkActive]="['dots--active']"
+            ></a>
+          </li>
+          <li>
+            <a
+              (click)="change(3)"
+              class="dots"
+              [routerLink]="['flight-engineer']"
+              [routerLinkActive]="['dots--active']"
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="grid__router-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

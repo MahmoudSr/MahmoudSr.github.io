@@ -1,0 +1,73 @@
+.wrapper {
+  background-image: url(/assets/home/background-home-mobile.jpg);
+  @media (min-width: 50em) {
+    background-image: url(/assets/home/background-home-desktop.jpg);
+  }
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  color: hsl(0 0% 100% / 0.7);
+
+  &__content {
+    max-width: 30em;
+
+    @media (min-width: 50em) {
+      max-width: 20em;
+    }
+  }
+
+  & p {
+    padding-top: 1em;
+  }
+
+  @media (min-width: 50em) {
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 6em;
+    padding-inline: 4em;
+  }
+}
+
+.clr-white {
+  color: var(--clr-white);
+}
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+
+  @media (min-width: 50em) {
+    margin-bottom: auto;
+  }
+
+  width: 12rem;
+  aspect-ratio: 1;
+
+  border: none;
+  border-radius: 50%;
+
+  margin-block: 2em;
+  letter-spacing: 2px;
+
+  font-size: 1.5rem;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr-white);
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: -1;
+  transition: scale 200ms linear;
+}
+
+.btn:hover::before,
+.btn:focus-within ::before {
+  scale: 1.5;
+}

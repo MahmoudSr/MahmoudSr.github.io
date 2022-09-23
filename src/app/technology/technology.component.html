@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="padding">
+    <app-header></app-header>
+  </div>
+  <div class="max-width">
+    <p class="uppercase heading-5 clr-white dest">space lauch 101</p>
+    <div class="grid">
+      <picture class="grid__images">
+        <source
+          media="(min-width: 50em)"
+          [srcset]="setImagePortrait || this.imagesPortrait[0]"
+        />
+        <img
+          [src]="setImageLandscape || this.imagesPortrait[0]"
+          alt=""
+          style="width: auto"
+        />
+      </picture>
+      <div class="grid__content">
+        <div class="grid__numbers">
+          <ul class="numbers flex flex__row">
+            <li>
+              <a
+                class="numbers__link"
+                (click)="change(0)"
+                [routerLink]="['launchvehicle']"
+                [routerLinkActive]="['numbers__link-active']"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >1</a
+              >
+            </li>
+            <li>
+              <a
+                class="numbers__link"
+                (click)="change(1)"
+                [routerLink]="['spaceport']"
+                [routerLinkActive]="['numbers__link-active']"
+                >2</a
+              >
+            </li>
+            <li>
+              <a
+                class="numbers__link"
+                (click)="change(2)"
+                [routerLink]="['spacecapsule']"
+                [routerLinkActive]="['numbers__link-active']"
+                >3</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="grid__content--out">
+          <p class="sub-head clr-white" style="margin-bottom: 0.5em">
+            The terminology
+          </p>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

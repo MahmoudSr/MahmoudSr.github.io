@@ -1,0 +1,18 @@
+:root {
+  --clr-black: hsl(230 35% 7%);
+  --clr-blue: hsl(231 77% 90%);
+  --clr-white: hsl(0 0% 100%);
+
+  --ff-main: "Barlow Condensed", sans-serif;
+  --ff-secondary: "Bellefair", serif;
+
+  --fs-heading1: clamp(5rem, 10vw, 9.375rem);
+  --fs-heading2: clamp(4rem, 10vw, 6.25rem);
+  --fs-heading3: clamp(2rem, 10vw, 3.5rem);
+  --fs-heading4: 2rem;
+  --fs-heading5: clamp(1rem, 4vw, 1.75rem);
+  --fs-heading-6: 1rem;
+  --fs-sub-head: 0.875rem;
+
+  --fw-400: 400;
+}

@@ -1,0 +1,55 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <div class="container">
+    <div class="grid">
+      <div class="flex flex__column gap-2">
+        <p class="clr-white heading-5 uppercase dest">pick you destinaiton</p>
+        <img class="planet" [src]="setImage || images[0]" setImage alt="" />
+      </div>
+      <div class="flex flex__column">
+        <ul class="plants__list">
+          <li>
+            <a
+              (click)="change(0)"
+              class="uppercase planets__link main-link"
+              [routerLinkActive]="['active']"
+              [routerLink]="['moon']"
+              >moon</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="change(1)"
+              class="uppercase planets__link link main-link"
+              [routerLinkActive]="['active']"
+              [routerLink]="['mars']"
+              >mars</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="change(2)"
+              class="uppercase planets__link main-link"
+              [routerLinkActive]="['active']"
+              [routerLink]="['europa']"
+              >europa</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="change(3)"
+              class="uppercase planets__link main-link"
+              [routerLinkActive]="['active']"
+              [routerLink]="['titan']"
+              >titan</a
+            >
+          </li>
+        </ul>
+        <br />
+        <!-- <div [@triggerName]="prepareRoute(outlet)"> -->
+        <router-outlet #outlet="outlet"></router-outlet>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>

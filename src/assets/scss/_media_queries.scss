@@ -1,0 +1,22 @@
+@media (min-width: 60em) {
+  .flex {
+    align-items: flex-start;
+    text-align: left;
+
+    &-row {
+      flex-direction: row;
+    }
+  }
+
+  .gap-2 {
+    gap: 4em;
+  }
+
+  .container {
+    padding-inline: 3em;
+  }
+
+  .wrapper {
+    padding: 1em;
+  }
+}
