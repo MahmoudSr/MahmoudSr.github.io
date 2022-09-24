@@ -3,3 +3,8 @@
 @import "/src/assets/scss/variables";
 @import "/src/assets/scss/utilities";
 @import "/src/assets/scss/media_queries";
+
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}

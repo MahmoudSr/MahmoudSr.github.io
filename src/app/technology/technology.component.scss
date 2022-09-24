@@ -1,5 +1,7 @@
 .wrapper {
   padding: 0;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   background-image: url(/assets/technology/background-technology-mobile.jpg);
   @media (min-width: 60em) {
     background-image: url(/assets/technology/background-technology-desktop.jpg);
