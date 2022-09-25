@@ -1,8 +1,14 @@
-.flex {
+.center-it {
   min-height: 100vh;
   background-image: url(/assets/destination/background-destination-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
   align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
